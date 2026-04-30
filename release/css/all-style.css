@@ -1,27 +1,3 @@
-@font-face {
-  font-family: "Nunito";
-  src: url("../fonts/NunitoSans-Bold.woff2") format("woff2"), url("../fonts/NunitoSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url("../fonts/NunitoSans-Regular.woff2") format("woff2"), url("../fonts/NunitoSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"), url("../fonts/NunitoSans-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -550,20 +526,16 @@ ul {
   top: 3px;
 }
 
-.map {
-  height: 100%;
+.menu {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: var(--wight_bold);
+  line-height: 1.2;
   width: 100%;
-}
-
-.map [class*=ymaps-2-1][class*=-ground-pane] {
-  pointer-events: none;
-  -webkit-filter: grayscale(1) invert(95%);
-  filter: grayscale(1) invert(95%);
-}
-
-.map [class*=-copyrights-promo],
-.map [class*=-copyright_logo_no] {
-  display: none;
 }
 
 .pagination {
@@ -653,16 +625,20 @@ ul {
   border: 1px solid transparent;
 }
 
-.menu {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: var(--wight_bold);
-  line-height: 1.2;
+.map {
+  height: 100%;
   width: 100%;
+}
+
+.map [class*=ymaps-2-1][class*=-ground-pane] {
+  pointer-events: none;
+  -webkit-filter: grayscale(1) invert(95%);
+  filter: grayscale(1) invert(95%);
+}
+
+.map [class*=-copyrights-promo],
+.map [class*=-copyright_logo_no] {
+  display: none;
 }
 
 .action {
