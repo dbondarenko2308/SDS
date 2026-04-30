@@ -10,12 +10,16 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__arrows {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
     @media only screen and (max-width: 991px) {
       display: none;
@@ -25,7 +29,7 @@
   &__tabs {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
     @media only screen and (max-width: 991px) {
       gap: 10px;
@@ -118,9 +122,15 @@
   }
 
   &__item {
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
+
     background: #f4f7fb;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+    }
+
   }
 
   &__img {

@@ -33,8 +33,6 @@ $(document).ready(function() {
 		} else {
 			$button.removeClass('show')
 		}
-
-		
 	})
 
 	$.fancybox.defaults.touch = false
@@ -227,9 +225,7 @@ $(document).ready(function() {
 		})
 	})
 
-
-
-		if ($('#map-contacts').length > 0) {
+	if ($('#map-contacts').length > 0) {
 		ymaps.ready(mapContacts)
 		function mapContacts() {
 			var myMap = new ymaps.Map('map-contacts', {
@@ -263,6 +259,40 @@ $(document).ready(function() {
 			myMap.geoObjects.add(mapAdres1)
 		}
 	}
+
+	$('.header__menu a').on('click', function(e) {
+		e.preventDefault()
+
+		const target = $($(this).attr('href'))
+
+		if (target.length) {
+			const offset = 100 
+
+			$('html, body').animate(
+				{
+					scrollTop: target.offset().top - offset
+				},
+				500
+			)
+		}
+	})
+
+	$('.footer__nav a').on('click', function(e) {
+		e.preventDefault()
+
+		const target = $($(this).attr('href'))
+
+		if (target.length) {
+			const offset = 100 
+
+			$('html, body').animate(
+				{
+					scrollTop: target.offset().top - offset
+				},
+				500
+			)
+		}
+	})
 })
 
 
