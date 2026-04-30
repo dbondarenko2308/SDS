@@ -1,0 +1,10 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.menu {
+  flex: 1 1 auto;
+  display: flex;
+  font-weight: var(--wight_bold);
+  line-height: 1.2;
+  width: 100%;
+
+}
