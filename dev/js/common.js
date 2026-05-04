@@ -262,6 +262,10 @@ $(document).ready(function() {
 	$('.header__menu a').on('click', function(e) {
 		e.preventDefault()
 
+		$('.header__burger').removeClass('active')
+		$('.header__right').removeClass('active')
+		$('body').removeClass('hidden')
+
 		const target = $($(this).attr('href'))
 
 		if (target.length) {
